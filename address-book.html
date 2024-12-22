@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Book with Sidebar</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="book-container">
+        <!-- TODO: Make sidebar open/close with a button on the top left -->
+        <aside class="main-sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Neshto drugo tuka naprimer nz</a></li>
+                <li><a href="#">Moje tuka profil, moje gore vdqsno</a></li>
+            </ul>
+        </aside>
+        <main>
+            <div class="top-bar">
+                <input type="text" id="searchbar" placeholder="Search contacts..." />
+                <select id="filters">
+                    <option value="all">All</option>
+                    <option value="favorites">Favorites</option>
+                    <option value="recent">Recently Added</option>
+                </select>
+            </div>
+            <ul class="contact-list">
+                <!-- Example contact links -->
+                <li><a class="contact", href="#">Yane Yanev</a></li>
+                <li><a class="contact", href="#">Stivan A. Smith</a></li>
+                <li><a class="contact", href="#">joro pokriv</a></li>
+            </ul>
+        </main>
+    </div>
+</body>
+</html>
