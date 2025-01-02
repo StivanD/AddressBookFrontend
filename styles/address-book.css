@@ -1,137 +1,184 @@
-.book-container {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-}
-
-/* Sidebar styling */
-.main-sidebar {
-    width: 100px;
-    background: linear-gradient(45deg, #4a90e2, #357abd);
-    color: #fff;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.main-sidebar h2 {
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-.main-sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.main-sidebar ul li {
-    margin-bottom: 10px;
-}
-
-.main-sidebar ul li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.main-sidebar ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Main content styling */
-main {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.top-bar {
+/* Navbar */
+.navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #4a90e2, #357abd);
+    color: white;
 }
 
-.top-bar input[type="text"] {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 10px;
-
-    box-sizing: border-box;
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    margin: 0 1rem;
+    transition: transform 0.3s, color 0.3s;
 }
 
-.top-bar select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 16px; /*I have no clue why but I can't make them align on the bottom in any other way...*/
+.navbar a:hover {
+    transform: scale(1.1);
+    color: #e3f2fd;
 }
 
-/*Everything below can be made much better - Vlado*/
+/* Address Book Container */
+.address-book-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.address-book-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.address-book-header h1 {
+    font-size: 2rem;
+    color: #357abd;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#search-bar {
+    padding: 0.8rem;
+    width: 15rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.add-contact-btn {
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    color: white;
+    background: linear-gradient(45deg, #4caf50, #357abd);
+    border-radius: 5px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.add-contact-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #357abd, #4caf50);
+}
+
+/* Sort Dropdown */
+.sort-dropdown {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+}
+
+/* Contact List */
 .contact-list {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     padding: 0;
 }
 
-.contact-list li {
-    margin-bottom: 5px;
-}
-
-.contact-list li a {
-    display: block;
-    text-decoration: none;
-    color: black;
-    font-size: 24px;
-    padding: 10px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fdfdfd;
-    transition: background-color 0.3s ease;
+.contact-item {
     width: 100%;
-    box-sizing: border-box;
+    min-width: 250px;
 }
 
-.contact-list li a:hover {
-    background-color: #f4f4f4;
+.contact-item a {
+    text-decoration: none;
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
+/* Contact Card */
+.contact-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+    gap: 1rem;
+}
 
-    .sidebar {
-        width: 100%; /* Sidebar takes full width */
-        position: fixed;
-        height: auto;
-    }
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
 
-    main {
-        margin-left: 0;
-        margin-top: 50px; /* Space for toggle button */
-    }
+/* Left Section */
+.contact-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
-    .top-bar {
-        flex-direction: column; /* Stack search bar and filters */
-    }
+.contact-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
 
-    .top-bar input[type="text"] {
-        width: 100%; /* Full-width input */
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
+.contact-left h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #357abd;
+    text-decoration: none;
+}
 
-    .top-bar select {
-        width: 100%; /* Full-width select */
-    }
+/* Right Section */
+.contact-phone {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
 
-    .sidebar-toggle {
-        top: 10px;
-        right: 10px;
-    }
+/* Paginator */
+.paginator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
 
-    .contact-list li a {
-        font-size: 18px;
-    }
+.paginator a {
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border: 1px solid #357abd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #357abd;
+    background: white;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.paginator a:hover {
+    background: #357abd;
+    color: white;
+    transform: scale(1.05);
+}
+
+.paginator .active {
+    background: #357abd;
+    color: white;
+    pointer-events: none;
+}
+
+.paginator-btn {
+    font-weight: bold;
 }

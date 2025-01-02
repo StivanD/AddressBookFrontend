@@ -8,9 +8,9 @@ body {
     margin: 0;
     background: linear-gradient(to bottom, #dceeff, #ffffff);
     color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
     min-height: 100vh;
     overflow-y: auto;
     height: auto;
@@ -20,6 +20,9 @@ body {
     text-align: center;
     animation: fadeIn 2s ease-in-out;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     flex-direction: column;
     gap: 2rem;
 }
