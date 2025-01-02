@@ -21,7 +21,8 @@ label {
     display: block;
 }
 
-input {
+input,
+textarea {
     width: 80%;
     padding: 0.8rem;
     margin-bottom: 1rem;
@@ -85,17 +86,43 @@ button.delete:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+.cancel-btn {
+    text-decoration: none;
+    color: white;
+    background: #f44336;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.cancel-btn:hover {
+    background: #d32f2f;
+    transform: scale(1.05);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
 
 @media (max-width: 768px) {
     .form-container {
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
         margin: 0;
+        padding: 2rem 0;
         align-content: center;
         background: linear-gradient(to bottom, #dceeff, #ffffff);
     }
 
     h1 {
         font-size: 1.8rem;
+    }
+
+    .form-container .delete-form-content {
+        padding: 2rem;
     }
 }
