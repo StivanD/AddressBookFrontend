@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Profile - Address Book</title>
+    <title>Edit Contact - Address Book</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -42,6 +42,16 @@
 
             <label for="edit-comment">Comment:</label>
             <textarea id="edit-comment">Great business partner</textarea>
+
+            <label for="edit-labels">Assign Labels:</label>
+            <select id="edit-labels" name="labels[]" multiple>
+                <option value="important" selected>Important</option>
+                <option value="work">Work</option>
+                <option value="family">Family</option>
+                <option value="friends" selected>Friends</option>
+                <option value="clients">Clients</option>
+            </select>
+            <small>Hold down the Ctrl (Windows) or Command (Mac) key to select multiple labels.</small>
 
             <div class="form-actions">
                 <button type="submit" class="save-btn">Save</button>
