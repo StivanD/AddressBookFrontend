@@ -25,5 +25,13 @@
         <a href="labels.html" class="cancel-btn">Cancel</a>
     </form>
 </div>
+
+<script> 
+    const labelColorInput = document.getElementById('label-color'); 
+    labelColorInput.addEventListener('input', function() { 
+        this.style.border = `2px solid ${this.value}`; 
+    }); 
+</script>
+
 </body>
 </html>

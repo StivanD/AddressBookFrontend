@@ -9,9 +9,11 @@
 
 .contact-header {
     display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    flex-direction: column; /* Stack the image and labels vertically */
+    align-items: center; /* Center-align the image and labels */
+    gap: 1rem; /* Add spacing between the image and labels */
+    max-width: 15rem;
+    flex-shrink: 0;
 }
 
 .contact-image {
@@ -38,16 +40,18 @@
 
 .contact-info {
     display: flex;
-    gap: 1rem;
-    justify-content: space-evenly;
+    gap: 2rem; /* Space between image section and fields section */
     font-size: 1.1rem;
     margin-bottom: 2rem;
+    justify-content: space-evenly;
+    align-items: flex-start;
 }
 
 .contact-fields {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    min-width: 0;
 }
 
 .contact-field strong {
@@ -89,6 +93,44 @@
     transform: scale(1.05);
 }
 
+.contact-labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center; 
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 1rem;
+}
+
+.color-label {
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.color-label[style*="background-color: #ff6b6b;"] {
+    background-color: #ff6b6b;
+}
+
+.color-label[style*="background-color: #6bc1ff;"] {
+    background-color: #6bc1ff;
+}
+
+.color-label[style*="background-color: #6bff89;"] {
+    background-color: #6bff89;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 500px) {
+    .contact-labels {
+        justify-content: flex-start;
+        margin-left: 1rem;
+    }
+}
 
 @media (max-width: 880px) {
     .contact-details-container {
